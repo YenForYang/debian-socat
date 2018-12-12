@@ -1,0 +1,585 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck,nodoc
+dpkg-buildpackage: info: source package socat
+dpkg-buildpackage: info: source version 1.7.3.2-2
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Laszlo Boszormenyi (GCS) <gcs@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with=autoreconf
+   dh_auto_clean
+	make -j8 distclean
+make[1]: Entering directory '/dev/shm/all/socat/socat-1.7.3.2'
+rm -f *.o libxio.a socat procan filan \
+socat.tar socat.tar.Z socat.tar.gz socat.tar.bz2 \
+socat.out compile.log test.log
+rm -f config.status config.cache config.log config.h Makefile
+rm -rf autom4te.cache
+make[1]: Leaving directory '/dev/shm/all/socat/socat-1.7.3.2'
+   dh_autoreconf_clean
+   dh_clean
+FAKEROOTKEY=2120018549 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
+ debian/rules build
+dh build --with=autoreconf
+   dh_update_autotools_config
+   dh_autoreconf
+autoreconf: 'configure.ac' and 'configure.in' both present.
+autoreconf: proceeding with 'configure.ac'
+aclocal: warning: autoconf input should be named 'configure.ac', not 'configure.in'
+aclocal: warning: 'configure.ac' and 'configure.in' both present.
+aclocal: proceeding with 'configure.ac'
+autoconf: warning: both `configure.ac' and `configure.in' are present.
+autoconf: warning: proceeding with `configure.ac'.
+autoconf: warning: both `configure.ac' and `configure.in' are present.
+autoconf: warning: proceeding with `configure.ac'.
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/dev/shm/all/socat/socat-1.7.3.2'
+dh_auto_configure -- --disable-readline
+	./configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking --disable-readline
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-maintainer-mode, --disable-dependency-tracking
+checking which defines needed for makedepend... 
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for gcc... icc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether icc accepts -g... yes
+checking for icc option to accept ISO C89... none needed
+checking for ranlib... ranlib
+checking for ar... xiar
+checking how to run the C preprocessor... icc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking stdbool.h usability... yes
+checking stdbool.h presence... yes
+checking for stdbool.h... yes
+checking for inttypes.h... (cached) yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking for strings.h... (cached) yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking for unistd.h... (cached) yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking for stdint.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking poll.h usability... yes
+checking poll.h presence... yes
+checking for poll.h... yes
+checking sys/poll.h usability... yes
+checking sys/poll.h presence... yes
+checking for sys/poll.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/uio.h usability... yes
+checking sys/uio.h presence... yes
+checking for sys/uio.h... yes
+checking for sys/stat.h... (cached) yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking sys/un.h usability... yes
+checking sys/un.h presence... yes
+checking for sys/un.h... yes
+checking pty.h usability... yes
+checking pty.h presence... yes
+checking for pty.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking netinet/in_systm.h usability... yes
+checking netinet/in_systm.h presence... yes
+checking for netinet/in_systm.h... yes
+checking for netinet/ip.h... yes
+checking netinet/tcp.h usability... yes
+checking netinet/tcp.h presence... yes
+checking for netinet/tcp.h... yes
+checking for net/if.h... yes
+checking arpa/nameser.h usability... yes
+checking arpa/nameser.h presence... yes
+checking for arpa/nameser.h... yes
+checking for sys/types.h... (cached) yes
+checking for netinet/in.h... (cached) yes
+checking for arpa/nameser.h... (cached) yes
+checking for netdb.h... (cached) yes
+checking for resolv.h... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking linux/if_tun.h usability... yes
+checking linux/if_tun.h presence... yes
+checking for linux/if_tun.h... yes
+checking net/if_dl.h usability... no
+checking net/if_dl.h presence... no
+checking for net/if_dl.h... no
+checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking for linux/errqueue.h... yes
+checking sys/utsname.h usability... yes
+checking sys/utsname.h presence... yes
+checking for sys/utsname.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking util.h usability... no
+checking util.h presence... no
+checking for util.h... no
+checking bsd/libutil.h usability... yes
+checking bsd/libutil.h presence... yes
+checking for bsd/libutil.h... yes
+checking libutil.h usability... no
+checking libutil.h presence... no
+checking for libutil.h... no
+checking sys/stropts.h usability... yes
+checking sys/stropts.h presence... yes
+checking for sys/stropts.h... yes
+checking regex.h usability... yes
+checking regex.h presence... yes
+checking for regex.h... yes
+checking linux/fs.h usability... yes
+checking linux/fs.h presence... yes
+checking for linux/fs.h... yes
+checking linux/ext2_fs.h usability... no
+checking linux/ext2_fs.h presence... no
+checking for linux/ext2_fs.h... no
+checking for setgrent... yes
+checking for getgrent... yes
+checking for endgrent... yes
+checking for getgrouplist... yes
+checking for cfmakeraw... yes
+checking for library containing res_9_init... no
+checking for hstrerror... yes
+checking for gethostent... yes
+checking for setsockopt... yes
+checking for hstrerror prototype... yes
+checking whether to include help... yes
+checking whether to include STDIO support... yes
+checking whether to include FD-number support... yes
+checking whether to include direct file support... yes
+checking whether to include direct create support... yes
+checking whether to include gopen support... yes
+checking whether to include explicit pipe support... yes
+checking whether to include explicit termios support... yes
+checking whether to include UNIX socket support... yes
+checking whether to include abstract UNIX socket support... yes
+checking whether to include IPv4 support... yes
+checking whether to include IPv6 support... yes
+checking for netinet/ip6.h... yes
+checking netinet6/in6.h usability... no
+checking netinet6/in6.h presence... no
+checking for netinet6/in6.h... no
+checking if __APPLE_USE_RFC_2292 is helpful... no
+checking whether to include raw IP support... yes
+checking whether to include generic socket support... yes
+checking whether to include generic network interface support... yes
+checking netpacket/packet.h usability... yes
+checking netpacket/packet.h presence... yes
+checking for netpacket/packet.h... yes
+checking for netinet/if_ether.h... yes
+checking whether to include TCP support... yes
+checking whether to include UDP support... yes
+checking whether to include SCTP support... yes
+checking for IPPROTO_SCTP... yes
+checking whether to include listen support... yes
+checking whether to include socks4 support... yes
+checking whether to include socks4a support... yes
+checking whether to include proxy connect support... yes
+checking whether to include exec support... yes
+checking whether to include system (shell) support... yes
+checking whether to include pty address support... yes
+checking whether to include ext2 fs attributes support... yes
+checking whether to include readline support... no
+checking whether to include openssl support... yes
+configure: checking for components of OpenSSL
+configure: checked for openssl/ssl.h... yes
+checking for libssl... yes
+checking whether to include openssl fips support... no
+checking whether to include tun/tap address support... yes
+checking whether to include system call tracing... yes
+checking whether to include file descriptor analyzer... yes
+checking whether to include retry support... yes
+checking included message level... debug
+checking for an ANSI C-conforming const... yes
+checking for uid_t in sys/types.h... yes
+checking for mode_t... yes
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for struct stat.st_blksize... yes
+checking for struct stat.st_blocks... yes
+checking for struct stat.st_rdev... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for nanosleep... yes
+checking whether icc needs -traditional... no
+checking for working memcmp... yes
+checking return type of signal handlers... void
+checking for strftime... yes
+checking for putenv... yes
+checking for select... yes
+checking for poll... yes
+checking for socket... yes
+checking for strtod... yes
+checking for strtol... yes
+checking for strtoul... yes
+checking for uname... yes
+checking for getpgid... yes
+checking for getsid... yes
+checking for getaddrinfo... yes
+checking for setgroups... yes
+checking for inet_aton... yes
+checking for dummy... no
+checking for ar... no
+checking for grantpt... yes
+checking for unlockpt... yes
+checking for strdup prototype... yes
+checking for strerror prototype... yes
+checking for strstr prototype... yes
+checking for getipnodebyname prototype... no
+checking for memrchr prototype... yes
+checking for if_indextoname prototype... yes
+checking for ptsname prototype... yes
+checking for long long... yes
+checking for sig_atomic_t... yes
+checking for bool... yes
+checking for socklen_t... yes
+checking for struct stat64... yes
+checking for off64_t... yes
+checking for sighandler_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for fdset->fds_bits... yes
+checking for sa_family_t... yes
+checking for struct sock_extended_err... yes
+checking for struct sigaction.sa_sigaction... yes
+checking for termios.c_ispeed... yes
+checking for offset of c_ispeed in struct termios... 13
+checking if _SVID3 is helpful... no
+checking if _XPG4_2 is helpful... no
+checking for struct timespec... yes
+checking for struct linger... yes
+checking for struct ip... yes
+checking for struct ip_mreq... yes
+checking for struct ip_mreqn... yes
+checking for struct ipv6_mreq... yes
+checking for struct ifreq... yes
+checking for struct ifreq.ifr_index... no
+checking for struct ifreq.ifr_ifindex... yes
+checking for struct sockaddr.sa_len... no
+checking for component names of sockaddr_in6... s6_addr
+checking for struct iovec... yes
+checking for struct msghdr.msg_control... yes
+checking for struct msghdr.msg_controllen... yes
+checking for struct msghdr.msgflags... yes
+checking for struct cmsghdr... yes
+checking for struct in_pktinfo... yes
+checking for ipi_spec_dst in struct in_pktinfo... yes
+checking for struct in6_pktinfo... yes
+checking for struct ip.ip_hl... yes
+checking for sigaction... yes
+checking for stat64... yes
+checking for fstat64... yes
+checking for lstat64... yes
+checking for lseek64... yes
+checking for truncate64... yes
+checking for ftruncate64... yes
+checking for strtoll... yes
+checking for hstrerror... (cached) yes
+checking for inet_ntop... yes
+checking for openpty... no
+checking for openpty in -lbsd... no
+checking for openpty in -lutil... yes
+checking for clock_gettime in -lrt... yes
+checking for flock... yes
+checking for setenv... yes
+checking for unsetenv... yes
+checking for SSLv2_client_method... no
+checking for SSLv2_client_method in -lcrypt... no
+checking for SSLv2_server_method... no
+checking for SSLv2_server_method in -lcrypt... no
+checking for SSL_CTX_set_default_verify_paths... yes
+checking for SSLv3_client_method... no
+checking for SSLv3_client_method in -lcrypt... no
+checking for SSLv3_server_method... no
+checking for SSLv3_server_method in -lcrypt... no
+checking for SSLv23_client_method... no
+checking for SSLv23_client_method in -lcrypt... no
+checking for SSLv23_server_method... no
+checking for SSLv23_server_method in -lcrypt... no
+checking for TLSv1_client_method... yes
+checking for TLSv1_server_method... yes
+checking for TLSv1_1_client_method... yes
+checking for TLSv1_1_server_method... yes
+checking for TLSv1_2_client_method... yes
+checking for TLSv1_2_server_method... yes
+checking for DTLSv1_client_method... yes
+checking for DTLSv1_server_method... yes
+checking for RAND_egd... no
+checking for RAND_egd in -lcrypt... no
+checking for DH_set0_pqg... yes
+checking for ASN1_STRING_get0_data... yes
+checking for RAND_status... yes
+checking for type EC_KEY... yes
+checking if snprintf conforms to C99... yes
+checking if printf has Z modifier... no
+checking shift offset of CRDLY... 9
+checking shift offset of TABDLY... 11
+checking shift offset of CSIZE... 4
+configure: using code run method to find basic types
+checking for equivalent simple type of size_t... 6 /* unsigned long */
+checking for equivalent simple type of mode_t... 4 /* unsigned int */
+checking for equivalent simple type of pid_t... 3 /* int */
+checking for equivalent simple type of uid_t... 4 /* unsigned int */
+checking for equivalent simple type of gid_t... 4 /* unsigned int */
+checking for equivalent simple type of time_t... 5 /* long */
+checking for equivalent simple type of socklen_t... 4 /* unsigned int */
+checking for equivalent simple type of off_t... 5 /* long */
+checking for equivalent simple type of off64_t... 5 /* long */
+checking for equivalent simple type of dev_t... 6 /* unsigned long */
+checking for basic type of struct stat.st_ino... 6 /* unsigned long */
+checking for basic type of struct stat.st_nlink... 6 /* unsigned long */
+checking for basic type of struct stat.st_size... 5 /* long */
+checking for basic type of struct stat.st_blksize... 5 /* long */
+checking for basic type of struct stat.st_blocks... 5 /* long */
+checking for basic type of struct stat64.st_dev... 6 /* unsigned long */
+checking for basic type of struct stat64.st_ino... 6 /* unsigned long */
+checking for basic type of struct stat64.st_nlink... 6 /* unsigned long */
+checking for basic type of struct stat64.st_size... 5 /* long */
+checking for basic type of struct stat64.st_blksize... 5 /* long */
+checking for basic type of struct stat64.st_blocks... 5 /* long */
+checking for basic type of struct timeval.tv_usec... 5 /* long */
+checking for basic type of struct rlimit.rlim_max... 6 /* unsigned long */
+checking for basic type of struct cmsghdr.cmsg_len... 6 /* unsigned long */
+checking for /dev/ptmx... yes
+checking for /proc... yes
+checking for /proc/*/fd... yes
+checking whether to include libwrap support... yes
+checking for components of libwrap... configure: checked for tcpd.h... yes
+checking for libwrap... yes
+checking for hosts_allow_table... yes
+checking for declaration of environ... yes
+checking for var environ... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-maintainer-mode, --disable-dependency-tracking
+make[1]: Leaving directory '/dev/shm/all/socat/socat-1.7.3.2'
+   dh_auto_build
+	make -j8
+make[1]: Entering directory '/dev/shm/all/socat/socat-1.7.3.2'
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o socat.o socat.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xioinitialize.o xioinitialize.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xiohelp.o xiohelp.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xioparam.o xioparam.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xiodiag.o xiodiag.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xioopen.o xioopen.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xioopts.o xioopts.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xiosignal.o xiosignal.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xiosigchld.o xiosigchld.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xioread.o xioread.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xiowrite.o xiowrite.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xiolayer.o xiolayer.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xioshutdown.o xioshutdown.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xioclose.o xioclose.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xioexit.o xioexit.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-process.o xio-process.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-fd.o xio-fd.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-fdnum.o xio-fdnum.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-stdio.o xio-stdio.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-pipe.o xio-pipe.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-gopen.o xio-gopen.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-creat.o xio-creat.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-file.o xio-file.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-named.o xio-named.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-socket.o xio-socket.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-interface.o xio-interface.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-listen.o xio-listen.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-unix.o xio-unix.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-ip.o xio-ip.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-ip4.o xio-ip4.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-ip6.o xio-ip6.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-ipapp.o xio-ipapp.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-tcp.o xio-tcp.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-sctp.o xio-sctp.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-rawip.o xio-rawip.c
+xio-ip.c(79): warning #1028: unknown warning specifier
+  const struct optdesc opt_res_aaonly   = { "res-aaonly",   "aaonly",   OPT_RES_AAONLY,   GROUP_SOCK_IP, PH_INIT, TYPE_BOOL, OFUNC_OFFSET_MASKS, XIO_OFFSETOF(para.socket.ip.res_opts), XIO_SIZEOF(para.socket.ip.res_opts), RES_AAONLY };
+                                                                                                                                                                                                                             ^
+
+xio-ip.c(81): warning #1028: unknown warning specifier
+  const struct optdesc opt_res_primary  = { "res-primary",  "primary",  OPT_RES_PRIMARY,  GROUP_SOCK_IP, PH_INIT, TYPE_BOOL, OFUNC_OFFSET_MASKS, XIO_OFFSETOF(para.socket.ip.res_opts), XIO_SIZEOF(para.socket.ip.res_opts), RES_PRIMARY };
+                                                                                                                                                                                                                             ^
+
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-socks.o xio-socks.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-proxy.o xio-proxy.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-udp.o xio-udp.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-progcall.o xio-progcall.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-exec.o xio-exec.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-system.o xio-system.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-termios.o xio-termios.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-readline.o xio-readline.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-pty.o xio-pty.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-openssl.o xio-openssl.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-streams.o xio-streams.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-ascii.o xio-ascii.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xiolockfile.o xiolockfile.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-tcpwrap.o xio-tcpwrap.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-ext2.o xio-ext2.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o xio-tun.o xio-tun.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o error.o error.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o dalan.o dalan.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o procan.o procan.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o procan-cdefs.o procan-cdefs.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o hostan.o hostan.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o fdname.o fdname.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o sysutils.o sysutils.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o utils.o utils.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o nestlex.o nestlex.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o vsnprintf_r.o vsnprintf_r.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o snprinterr.o snprinterr.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o filan.o filan.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o sycls.o sycls.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o sslcls.o sslcls.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o procan_main.o procan_main.c
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -I. -Wdate-time -D_FORTIFY_SOURCE=2  -c -o filan_main.o filan_main.c
+sslcls.c(97): warning #1478: function "TLSv1_client_method" (declared at line 1866 of "/usr/include/openssl/ssl.h") was declared deprecated
+     result = TLSv1_client_method();
+              ^
+
+sslcls.c(105): warning #1478: function "TLSv1_server_method" (declared at line 1865 of "/usr/include/openssl/ssl.h") was declared deprecated
+     result = TLSv1_server_method();
+              ^
+
+sslcls.c(114): warning #1478: function "TLSv1_1_client_method" (declared at line 1872 of "/usr/include/openssl/ssl.h") was declared deprecated
+     result = TLSv1_1_client_method();
+              ^
+
+sslcls.c(124): warning #1478: function "TLSv1_1_server_method" (declared at line 1871 of "/usr/include/openssl/ssl.h") was declared deprecated
+     result = TLSv1_1_server_method();
+              ^
+
+sslcls.c(134): warning #1478: function "TLSv1_2_client_method" (declared at line 1878 of "/usr/include/openssl/ssl.h") was declared deprecated
+     result = TLSv1_2_client_method();
+              ^
+
+sslcls.c(144): warning #1478: function "TLSv1_2_server_method" (declared at line 1877 of "/usr/include/openssl/ssl.h") was declared deprecated
+     result = TLSv1_2_server_method();
+              ^
+
+sslcls.c(154): warning #1478: function "DTLSv1_client_method" (declared at line 1884 of "/usr/include/openssl/ssl.h") was declared deprecated
+     result = DTLSv1_client_method();
+              ^
+
+sslcls.c(164): warning #1478: function "DTLSv1_server_method" (declared at line 1883 of "/usr/include/openssl/ssl.h") was declared deprecated
+     result = DTLSv1_server_method();
+              ^
+
+xiar r libxio.a xioinitialize.o xiohelp.o xioparam.o xiodiag.o xioopen.o xioopts.o xiosignal.o xiosigchld.o xioread.o xiowrite.o xiolayer.o xioshutdown.o xioclose.o xioexit.o xio-process.o xio-fd.o xio-fdnum.o xio-stdio.o xio-pipe.o xio-gopen.o xio-creat.o xio-file.o xio-named.o xio-socket.o xio-interface.o xio-listen.o xio-unix.o xio-ip.o xio-ip4.o xio-ip6.o xio-ipapp.o xio-tcp.o xio-sctp.o xio-rawip.o xio-socks.o xio-proxy.o xio-udp.o xio-rawip.o xio-progcall.o xio-exec.o xio-system.o xio-termios.o xio-readline.o xio-pty.o xio-openssl.o xio-streams.o xio-ascii.o xiolockfile.o xio-tcpwrap.o xio-ext2.o xio-tun.o error.o dalan.o procan.o procan-cdefs.o hostan.o fdname.o sysutils.o utils.o nestlex.o vsnprintf_r.o snprinterr.o filan.o sycls.o sslcls.o
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o procan procan_main.o procan.o procan-cdefs.o hostan.o error.o sycls.o sysutils.o utils.o vsnprintf_r.o snprinterr.o -lwrap -lrt -lutil  -lssl -lcrypto
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o filan filan_main.o filan.o fdname.o error.o sycls.o sysutils.o utils.o vsnprintf_r.o snprinterr.o -lwrap -lrt -lutil  -lssl -lcrypto
+xiar: executing 'ar'
+ar: creating libxio.a
+ranlib libxio.a
+icc -g -O2 -fdebug-prefix-map=/dev/shm/all/socat/socat-1.7.3.2=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -D_GNU_SOURCE -Wall -Wno-parentheses  -DHAVE_CONFIG_H -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o socat socat.o libxio.a -lwrap -lrt -lutil  -lssl -lcrypto
+make[1]: Leaving directory '/dev/shm/all/socat/socat-1.7.3.2'
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary --with=autoreconf
+   dh_testroot
+   dh_prep
+   dh_auto_install
+	make -j8 install DESTDIR=/dev/shm/all/socat/socat-1.7.3.2/debian/socat AM_UPDATE_INFO_DIR=no
+make[1]: Entering directory '/dev/shm/all/socat/socat-1.7.3.2'
+mkdir -p /dev/shm/all/socat/socat-1.7.3.2/debian/socat/usr/bin
+/usr/bin/install -c -m 755 socat /dev/shm/all/socat/socat-1.7.3.2/debian/socat/usr/bin
+/usr/bin/install -c -m 755 procan /dev/shm/all/socat/socat-1.7.3.2/debian/socat/usr/bin
+/usr/bin/install -c -m 755 filan /dev/shm/all/socat/socat-1.7.3.2/debian/socat/usr/bin
+mkdir -p /dev/shm/all/socat/socat-1.7.3.2/debian/socat/usr/share/man/man1
+/usr/bin/install -c -m 644 ./doc/socat.1 /dev/shm/all/socat/socat-1.7.3.2/debian/socat/usr/share/man/man1/
+make[1]: Leaving directory '/dev/shm/all/socat/socat-1.7.3.2'
+   dh_installdocs
+   dh_installchangelogs
+   dh_installexamples
+   dh_installman
+   dh_lintian
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+dpkg-shlibdeps: warning: deprecated use of LD_LIBRARY_PATH with private library directory which interferes with cross-building, please use -l option instead
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/socat/usr/bin/filan debian/socat/usr/bin/socat debian/socat/usr/bin/procan were not linked against libgcc_s.so.1 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/socat/usr/bin/filan debian/socat/usr/bin/socat debian/socat/usr/bin/procan were not linked against libdl.so.2 (they use none of the library's symbols)
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'socat' in '../socat_1.7.3.2-2_amd64.deb'.
+dpkg-deb: building package 'socat-dbgsym' in '../socat-dbgsym_1.7.3.2-2_amd64.deb'.
+FAKEROOTKEY=277452518 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../socat_1.7.3.2-2_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian socat_1.7.3.2-2_amd64.changes ...
+W: socat: hardening-no-pie usr/bin/filan
+W: socat: hardening-no-pie usr/bin/procan
+W: socat: hardening-no-pie usr/bin/socat
+N: 0 tags overridden; 1 unused override
+Finished running lintian.

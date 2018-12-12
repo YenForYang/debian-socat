@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Sun, 19 Nov 2017 13:56:10 +0000
+Source: socat
+Binary: socat
+Built-For-Profiles: nobiarch nocheck nodoc
+Architecture: amd64
+Version: 1.7.3.2-2
+Distribution: unstable
+Urgency: medium
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Description:
+ socat      - multipurpose relay for bidirectional data transfer
+Closes: 882020
+Changes:
+ socat (1.7.3.2-2) unstable; urgency=medium
+ .
+   * Update Standards-Version to 4.1.1:
+     - change package priority to optional.
+   * Remove dh-autoreconf build dependency.
+ .
+   [ Andreas Henriksson <andreas@fatal.se> ]
+   * Have compat.h define PATH_MAX if undefined (closes: #882020).
+Checksums-Sha1:
+ b386967b77733bbf30bd5944be3a08bd28173f94 376308 socat-dbgsym_1.7.3.2-2_amd64.deb
+ 33aeb356f0daf0ae7cb0cc2337ec78a417d45252 5327 socat_1.7.3.2-2_amd64.buildinfo
+ a1d50d63746d8b0e356d2f8780251a23a42db4c8 245464 socat_1.7.3.2-2_amd64.deb
+Checksums-Sha256:
+ 42ca50ea3280453ab3b1e787e0dc975e4bb23642a591c216bd7adf1e70cb4dbf 376308 socat-dbgsym_1.7.3.2-2_amd64.deb
+ ef2eb7e94c5b08ee4f71e8b9fb949979f8578aa4bd4d7d992962d85f9a9690cc 5327 socat_1.7.3.2-2_amd64.buildinfo
+ b176233cd6161886a19da277db88344a7993f07470f613392d75d1963faf28f6 245464 socat_1.7.3.2-2_amd64.deb
+Files:
+ c4a53b8e2da0df87b700677ad1effcdb 376308 debug optional socat-dbgsym_1.7.3.2-2_amd64.deb
+ 16213a38615c99e2c711d82942e56d8b 5327 net optional socat_1.7.3.2-2_amd64.buildinfo
+ 9b99483b0d65f56d55cbe9906778ca86 245464 net optional socat_1.7.3.2-2_amd64.deb

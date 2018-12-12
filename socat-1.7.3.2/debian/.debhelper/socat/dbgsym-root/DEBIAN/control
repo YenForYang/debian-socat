@@ -1,0 +1,12 @@
+Package: socat-dbgsym
+Source: socat
+Version: 1.7.3.2-2
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Installed-Size: 445
+Depends: socat (= 1.7.3.2-2)
+Section: debug
+Priority: optional
+Description: debug symbols for socat
+Build-Ids: 031f58b1feed292406db5f97c91814a97675748d 708f349ac655182073a39ee67dfaea66a3be5580 c9dd59a8e926a0447f14d6397d894c6a8108e838

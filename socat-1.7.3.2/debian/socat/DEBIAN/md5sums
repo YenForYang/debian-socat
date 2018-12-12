@@ -1,0 +1,10 @@
+945d366fa87e84432c01f22344ce7c3d  usr/bin/filan
+768e779a7d6c44c5d226a9d9c746740c  usr/bin/procan
+5dda9fba56e5df5716988610647d313d  usr/bin/socat
+72c12746a0b483c33ff5af49ab2f5128  usr/share/doc/socat/NEWS.Debian.gz
+05ccf1b2d3788d0951ee2ada7a56b904  usr/share/doc/socat/README.Debian
+5248209e4056b2c2251898678e96665e  usr/share/doc/socat/changelog.Debian.gz
+9d124ab777f8ec1cf44cbb652a4b2b3c  usr/share/doc/socat/changelog.gz
+155d63ba4a95ad3f0ca852a5f0078649  usr/share/doc/socat/copyright
+24530f57fdfacf16a6fb3a15f0f9230c  usr/share/lintian/overrides/socat
+20f4ae113d480552a2e3443a3eb5e6fa  usr/share/man/man1/socat.1.gz

@@ -1,0 +1,3 @@
+shlibs:Depends=libc6 (>= 2.15), libgcc1 (>= 1:3.0), libssl1.1 (>= 1.1.0), libwrap0 (>= 7.6-4~)
+misc:Depends=
+misc:Pre-Depends=

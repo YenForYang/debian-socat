@@ -1,0 +1,16 @@
+./BUGREPORTS
+./DEVELOPMENT
+./EXAMPLES
+./FAQ
+./PORTING
+./README
+./README.FIPS
+./SECURITY
+./doc/index.html
+./doc/socat-genericsocket.html
+./doc/socat-multicast.html
+./doc/socat-openssltunnel.html
+./doc/socat-tun.html
+./doc/socat.html
+./doc/dest-unreach.css
+./doc/xio.help
